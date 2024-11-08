@@ -247,7 +247,7 @@ This training is for developers who want to use Copilot specifically within Inte
 
 ---
 
-## Advanced Copilot Usage (15 minutes)
+## Advanced Copilot Usage
 
 ### 1. Generating Code from Comments
 
@@ -551,7 +551,7 @@ public class TaskService {
 ```
 ---
 
-## Best Practices (10 minutes)
+## Best Practices
 
 ### 1. Writing Effective Prompts
 
@@ -661,10 +661,9 @@ For IntelliJ IDEA-specific documentation related to GitHub Copilot, you can refe
 2. **IntelliJ IDEA Copilot-Specific Resources**  
    You can find specific documentation and tutorials for GitHub Copilot within IntelliJ IDEA at the following links:
 
-- [Using GitHub Copilot in JetBrains IDEs](https://docs.github.com/en/copilot/getting-started-with-github-copilot/getting-started-with-github-copilot-in-jetbrains-ides)
+- [Using GitHub Copilot in JetBrains IDEs](https://docs.github.com/en/copilot/quickstart?tool=jetbrains)
 - [Getting Started with GitHub Copilot](https://github.com/features/copilot/getting-started)
 
 
 
-"""
 

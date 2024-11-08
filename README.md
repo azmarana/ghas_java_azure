@@ -66,3 +66,6 @@ To run the unit tests, execute:
 ```bash
 mvn test
 ```
+## START COPILOT TRAINING HERE
+
+For copilot training instructions refer to the [GitHub Copilot Demo](GitHubCopilotDemo.md).
