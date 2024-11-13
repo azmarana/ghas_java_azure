@@ -23,7 +23,7 @@ This training is for developers who want to use Copilot specifically within Inte
    To use GitHub Copilot, you need an active subscription. There are two main types of subscriptions:
 
    - **Individual Subscription**: This is for individual developers who want to use Copilot for personal projects. It provides access to all Copilot features within supported IDEs.
-   - **Organizational Subscription**: This is for teams and organizations. It allows multiple users within an organization to use Copilot, providing centralized billing and management. This option is ideal for companies looking to enhance their development workflow across the team.
+   - **Organizational Subscription (Business or Enterprise)**: This is for teams and organizations. It allows multiple users within an organization to use Copilot, providing centralized billing and management. This option is ideal for companies looking to enhance their development workflow across the team.
 
 2. **Compatible IntelliJ IDEA Version**  
    GitHub Copilot is compatible with the following IntelliJ IDEA versions:
