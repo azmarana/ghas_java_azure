@@ -8,7 +8,8 @@ trigger:
 - main
 
 pool:
-  name: Default  # or 'vmImage: ubuntu-latest' if using a hosted agent
+  vmImage: 'ubuntu-latest'
+
 
 steps:
 - script: |
