@@ -3,17 +3,20 @@
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 
+
 trigger:
 - main
 
 pool:
-  name: Default
+  name: Default  # or 'vmImage: ubuntu-latest' if using a hosted agent
 
 steps:
-- task: UseJavaVersion@1
-  inputs:
-    versionSpec: '11'
-    jdkArchitecture: 'x64'
+- script: |
+    echo "Setting up Java 11"
+    sudo apt update
+    sudo apt install -y openjdk-11-jdk
+    java -version
+  displayName: 'Set up Java'
 
 - script: |
     echo "Building the project"
@@ -24,14 +27,8 @@ steps:
     echo "Running tests"
     mvn test
   displayName: 'Run tests'
-- script: |
-    echo "Building the project"
-    mvn clean install
-  displayName: 'Build the project'
 
-- script: |
-    echo "Running tests"
-    mvn test
-  displayName: 'Run tests'
+
+
 
   
