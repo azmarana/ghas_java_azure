@@ -3,29 +3,24 @@
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 
-
 trigger:
 - main
 
 pool:
   name: 'Azure Pipelines'
 
-  - script: |
+steps:
+- script: |
     echo "Setting up Java..."
     sudo apt-get install -y openjdk-11-jdk
     java -version
   displayName: 'Set up Java'
 
-
-steps:
-- task: UseJavaVersion@1
-  inputs:
-    version: '11'
-    architecture: 'x64'
 - script: |
     echo "Running pipeline!"
     java -version
   displayName: 'Run a script'
+
 
 
 
