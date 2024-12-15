@@ -10,6 +10,12 @@ trigger:
 pool:
   name: 'Azure Pipelines'
 
+  - script: |
+    echo "Setting up Java..."
+    sudo apt-get install -y openjdk-11-jdk
+    java -version
+  displayName: 'Set up Java'
+
 
 steps:
 - task: UseJavaVersion@1
