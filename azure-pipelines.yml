@@ -8,27 +8,18 @@ trigger:
 - main
 
 pool:
-  vmImage: 'ubuntu-latest'
+  name: 'Azure Pipelines'
 
 
 steps:
+- task: UseJavaVersion@1
+  inputs:
+    version: '11'
+    architecture: 'x64'
 - script: |
-    echo "Setting up Java 11"
-    sudo apt update
-    sudo apt install -y openjdk-11-jdk
+    echo "Running pipeline!"
     java -version
-  displayName: 'Set up Java'
-
-- script: |
-    echo "Building the project"
-    mvn clean install
-  displayName: 'Build the project'
-
-- script: |
-    echo "Running tests"
-    mvn test
-  displayName: 'Run tests'
-
+  displayName: 'Run a script'
 
 
 
