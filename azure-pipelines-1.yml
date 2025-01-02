@@ -7,12 +7,31 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- task: UseNode@2
-  inputs:
-    version: '16.x'
-- script: npm install
+- script: |
+    echo "Setting up Node.js"
+    curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+    sudo apt-get install -y nodejs
+    node --version
+    npm --version
+  displayName: 'Install Node.js'
+
+- script: |
+    echo "Installing dependencies"
+    npm install
   displayName: 'Install Dependencies'
-- script: npm test
+
+- script: |
+    echo "Running tests"
+    npm test
   displayName: 'Run Tests'
-- script: npm run build
+
+- script: |
+    echo "Building the project"
+    npm run build
   displayName: 'Build Project'
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    pathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    artifactName: 'drop'
+  displayName: 'Publish Build Artifacts'
